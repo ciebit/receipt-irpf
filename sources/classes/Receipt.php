@@ -32,12 +32,12 @@ class Receipt
         int $yearCalendar,
         File $file,
         Status $status,
-        string $associationId = '',
-        string $id = ''
+        string $associationId = null,
+        string $id = null
     ) {
-        $this->associationId = $associationId;
+        $this->associationId = (string) $associationId;
         $this->file = $file;
-        $this->id = $id;
+        $this->id = (string) $id;
         $this->status = $status;
         $this->year = $year;
         $this->yearCalendar = $yearCalendar;

@@ -54,11 +54,26 @@ class ReceiptTests extends TestCase
             new Status(self::STATUS)
         );
 
-        $this->assertEquals(self::ASSOCIATION_ID, '');
+        $this->assertEquals('', $receipt->getAssociationId());
         $this->assertInstanceOf(File::class, $receipt->getFile());
-        $this->assertEquals(self::ID, '');
+        $this->assertEquals('', $receipt->getId());
         $this->assertEquals(self::STATUS, $receipt->getStatus()->getValue());
         $this->assertEquals(self::YEAR, $receipt->getYear());
         $this->assertEquals(self::YEAR_CALENDAR, $receipt->getYearCalendar());
+    }
+
+    public function testCreateMinimalWithNull(): void
+    {
+        $receipt = new Receipt(
+            self::YEAR,
+            self::YEAR_CALENDAR,
+            $this->getFile(),
+            new Status(self::STATUS),
+            null,
+            null
+        );
+
+        $this->assertEquals('', $receipt->getAssociationId());
+        $this->assertEquals('', $receipt->getId());
     }
 }
