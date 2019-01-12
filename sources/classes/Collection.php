@@ -17,9 +17,12 @@ class Collection implements Countable, IteratorAggregate
         $this->items = new ArrayObject;
     }
 
-    public function add(Receipt $receipt): self
+    public function add(Receipt ...$receipts): self
     {
-        $this->items->append($receipt);
+        foreach ($receipts as $receipt) {
+            $this->items->append($receipt);
+        }
+
         return $this;
     }
 
