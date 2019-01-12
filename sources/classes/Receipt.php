@@ -7,9 +7,6 @@ use Ciebit\ReceiptIrpf\Status;
 class Receipt
 {
     /** @var string */
-    private const TYPE = 'file';
-
-    /** @var string */
     private $associationId;
 
     /** @var File */

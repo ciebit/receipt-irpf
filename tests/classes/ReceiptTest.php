@@ -8,7 +8,7 @@ use Ciebit\ReceiptIrpf\Receipt;
 use Ciebit\ReceiptIrpf\Status;
 use PHPUnit\Framework\TestCase;
 
-class ReceiptTests extends TestCase
+class ReceiptTest extends TestCase
 {
     private const ASSOCIATION_ID = '4';
     private const ID = '2';

@@ -9,7 +9,7 @@ use Ciebit\ReceiptIrpf\Receipt;
 use Ciebit\ReceiptIrpf\Status;
 use PHPUnit\Framework\TestCase;
 
-class CollectionTests extends TestCase
+class CollectionTest extends TestCase
 {
     public function getFile(): File
     {
