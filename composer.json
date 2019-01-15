@@ -1,0 +1,29 @@
+{
+    "name": "ciebit/receipt-irpf",
+    "description": "Representação dos comprovantes de rendimento pagos e de imposto sobre a renda retido na fonte",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Johnny Saymon",
+            "email": "saymon@ciebit.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ciebit\\ReceiptIrpf\\": "sources/classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ciebit\\ReceiptIrpfTests\\": "tests/classes/"
+        }
+    },
+    "require": {
+        "ciebit/files": "^0.4",
+        "myclabs/php-enum": "^1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    }
+}
